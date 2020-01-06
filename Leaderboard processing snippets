@@ -1,0 +1,531 @@
+def setup():
+    global CBtext1, CBtext2, CBtext3, img1, img2, img3, img4, img5, font1, font2, font3, scoreboard, playerAmount, player1, player2, player3, player4, player5
+    global calculatorButton1, calculatorButton2, calculatorButton3, rect1sum, rect1_1sum, rect1_2sum, rect2sum, rect2_1sum, rect2_2sum, rect3sum, rect3_1sum, rect3_2sum
+    global rect4sum, rect4_1sum, rect5sum, rect1Height, rect1_1Height, rect1_2Height, rect2Height, rect2_1Height, rect2_2Height, rect3Height, rect3_1Height, rect3_2Height, rect4Height
+    global rect4_1Height, rect5Height, rect1Won
+    
+    # 1256,900
+    size(800,800)
+    font1 = createFont("yoster.ttf", 50)
+    font2 = createFont("yoster.ttf", 25)
+    font3 = createFont("yoster.ttf", 20)
+    img1 = loadImage("Player1Won.png")
+    img2 = loadImage("Player2Won.png")
+    img3 = loadImage("Player3Won.png")
+    img4 = loadImage("Player4Won.png")
+    img5 = loadImage("Player5Won.png")
+    scoreboard = "SCOREBOARD"
+    playerAmount = "This game is played with 3-5 players.\n\nPress '3' to play with three players.\nPress '4' to play with four players.\nPress '5' to play with five players."
+    player1 = "Player 1"
+    player2 = "Player 2"
+    player3 = "Player 3"
+    player4 = "Player 4"
+    player5 = "Player 5"
+    rect1sum = 0
+    rect2sum = 0
+    rect3sum = 0
+    
+    rect1_1sum = 0
+    rect2_1sum = 0
+    rect3_1sum = 0
+    rect4sum = 0
+    
+    rect1_2sum = 0    
+    rect2_2sum = 0
+    rect3_2sum = 0
+    rect4_1sum = 0
+    rect5sum = 0
+    
+    rect1Height = 610
+    rect1_1Height = 610
+    rect1_2Height = 610
+    rect2Height = 610
+    rect2_1Height = 610
+    rect2_2Height = 610
+    rect3Height = 610
+    rect3_1Height = 610
+    rect3_2Height = 610
+    rect4Height = 610
+    rect4_1Height = 610
+    rect5Height = 610
+    
+    def draw():
+    global CBtext1, CBtext2, CBtext3, img1, img2, img3, img4, img5, font1, font2, font3, scoreboard, playerAmount, rect1, rect1_1, rect1_2, rect2, rect2_1, rect2_2, rect3
+    global rect3_1, rect3_2, rect4, rect4_1, rect5, player1, player2, player3, player4, player5, calculatorButton1, calculatorButton2, calculatorButton3, rect1sum, rect1_1sum, rect1_2sum, rect2sum
+    global rect2_1sum, rect2_2sum, rect3sum, rect3_1sum, rect3_2sum, rect4sum, rect4_1sum, rect5sum, rect1Height, rect1_1Height, rect1_2Height, rect2Height, rect2_1Height, rect2_2Height, rect3Height
+    global rect3_1Height, rect3_2Height, rect4Height, rect4_1Height, rect5Height, rect1Won
+    
+    
+    background(20,20,50)
+    textFont(font1)
+    text(scoreboard, 400, 100)
+    textAlign(CENTER)
+    
+    textFont(font3)
+    text(playerAmount, 400, 200)
+    textAlign(CENTER)
+    
+     
+    
+    def calculatorButton1():
+        textSize(22)
+        CBtext1 = text("Click on a players rectangle\n to progress during the game!", 390, 700)
+        textSize(22)
+        CBtext2 = text("Left mouse click\n to add!", 100, 700)
+        textSize(22)
+        CBtext3 = text("Right mouse click\n to decrease!", 690, 700)
+        textFont(font3)
+        text(rect1sum, 275, 650)
+        text(rect2sum, 400, 650)
+        text(rect3sum, 525, 650)
+        textAlign(CENTER)
+        
+    def calculatorButton2():
+        textSize(22)
+        CBtext1 = text("Click on a players rectangle\n to progress during the game!", 390, 700)
+        textSize(22)
+        CBtext2 = text("Left mouse click\n to add!", 100, 700)
+        textSize(22)
+        CBtext3 = text("Right mouse click\n to decrease!", 690, 700)
+        textFont(font3)
+        text(rect1_1sum, 200, 650)
+        text(rect2_1sum, 330, 650)
+        text(rect3_1sum, 460, 650)
+        text(rect4sum, 590, 650)
+        textAlign(CENTER)    
+        
+    def calculatorButton3():
+        textSize(22)
+        CBtext1 = text("Click on a players rectangle\n to progress during the game!", 390, 700)
+        textSize(22)
+        CBtext2 = text("Left mouse click\n to add!", 100, 700)
+        textSize(22)
+        CBtext3 = text("Right mouse click\n to decrease!", 690, 700)
+        textFont(font3)
+        text(rect1_2sum, 140, 650)
+        text(rect2_2sum, 270, 650)
+        text(rect3_2sum, 400, 650)
+        text(rect4_1sum, 530, 650)
+        text(rect5sum, 660, 650)
+        textAlign(CENTER)    
+   
+                                        
+                                
+#### '3'
+          
+    def rect1():
+        
+        #550,650
+        rectMode(CORNERS)
+        rect(225,rect1Height,325,630)
+        rectMode(CENTER)
+        textSize(22)
+        text(player1,275,450,100,400)
+    
+    def rect2():
+        
+        rectMode(CORNERS)
+        rect(350,rect2Height,450,630)
+        rectMode(CENTER)
+        textSize(22)
+        text(player2,400,450,100,400)    
+        
+    def rect3():
+        
+        rectMode(CORNERS)
+        rect(475,rect3Height,575,630)
+        rectMode(CENTER)
+        textSize(22)
+        text(player3,525,450,100,400)   
+        
+#### '4'          
+        
+    def rect1_1():
+        
+        rectMode(CORNERS)
+        rect(150,rect1_1Height,250,630)
+        rectMode(CENTER)
+        textSize(22)
+        text(player1,200,450,100,400)
+        
+    def rect2_1():
+        
+        rectMode(CORNERS)
+        rect(280,rect2_1Height,380,630)
+        rectMode(CENTER)
+        textSize(22)
+        text(player2,330,450,100,400)
+        
+    def rect3_1():
+        
+        rectMode(CORNERS)
+        rect(410,rect3_1Height,510,630)
+        rectMode(CENTER)
+        textSize(22)
+        text(player3,460,450,100,400)
+        
+    def rect4():
+        
+        rectMode(CORNERS)
+        rect(540,rect4Height,640,630) 
+        rectMode(CENTER)  
+        textSize(22)
+        text(player4,590,450,100,400)    
+        
+#### '5'
+                            
+    def rect1_2():
+        
+        rectMode(CORNERS)
+        rect(90,rect1_2Height,190,630)
+        rectMode(CENTER)
+        textSize(22)
+        text(player1,140,450,100,400)
+            
+    def rect2_2():
+        
+        rectMode(CORNERS)
+        rect(220,rect2_2Height,320,630)
+        rectMode(CENTER)
+        textSize(22)
+        text(player2,270,450,100,400)
+        
+    def rect3_2():
+        
+        rectMode(CORNERS)
+        rect(350,rect3_2Height,450,630)
+        rectMode(CENTER)
+        textSize(22)
+        text(player3,400,450,100,400)
+        
+    def rect4_1():
+        
+        rectMode(CORNERS)
+        rect(480,rect4_1Height,580,630) 
+        rectMode(CENTER)  
+        textSize(22)
+        text(player4,530,450,100,400)
+        
+    def rect5():
+        
+        rectMode(CORNERS)
+        rect(610,rect5Height,710,630)
+        rectMode(CENTER)
+        textSize(22)
+        text(player5,660,450,100,400)
+      
+##################################################################
+
+    if (key == '3'):
+        playerAmount = "There are 3 players!"
+        
+        rect1()
+                
+        rect2()
+                
+        rect3()
+        
+        calculatorButton1()    
+        
+        if rect1sum == 88:
+            image(img1, 0, 0)   
+            player1 = ""
+            player2 = ""
+            player3 = ""  
+            player4 = ""
+            player5 = ""
+            CBtext1 = ""
+            CBtext2 = ""
+            CBtext3 = ""
+                    
+        if rect2sum == 88:
+            image(img2, 0, 0)
+            player1 = ""
+            player2 = ""
+            player3 = ""
+            player4 = ""
+            player5 = ""
+            CBtext1 = ""
+            CBtext2 = ""
+            CBtext3 = ""
+    
+        if rect3sum == 88:
+            image(img3, 0, 0)
+            player1 = ""
+            player2 = ""
+            player3 = ""
+            player4 = ""
+            player5 = ""
+            CBtext1 = ""
+            CBtext2 = ""
+            CBtext3 = ""
+        
+        
+    if (key == '4'):
+        playerAmount = "There are 4 players!"
+        
+        rect1_1()
+        
+        rect2_1()
+        
+        rect3_1()
+       
+        rect4()
+        
+        calculatorButton2()
+        
+        if rect1_1sum == 88:
+            image(img1, 0, 0)
+            player1 = ""
+            player2 = ""
+            player3 = ""
+            player4 = ""
+            player5 = ""   
+            CBtext1 = ""
+            CBtext2 = ""
+            CBtext3 = ""
+            
+        if rect2_1sum == 88:
+            image(img2, 0, 0)
+            player1 = ""
+            player2 = ""
+            player3 = ""
+            player4 = ""
+            player5 = ""   
+            CBtext1 = ""
+            CBtext2 = ""
+            CBtext3 = ""
+        
+        if rect3_1sum == 88:
+            image(img3, 0, 0)
+            player1 = ""
+            player2 = ""
+            player3 = ""
+            player4 = ""
+            player5 = ""   
+            CBtext1 = ""
+            CBtext2 = ""
+            CBtext3 = ""
+        
+        if rect4sum == 88:
+            image(img4, 0, 0)
+            player1 = ""
+            player2 = ""
+            player3 = ""
+            player4 = ""
+            player5 = ""      
+            CBtext1 = ""
+            CBtext2 = ""
+            CBtext3 = ""             
+    
+        
+    if (key == '5'):
+        playerAmount = "There are 5 players!"
+        
+        rect1_2()
+        
+        rect2_2()
+        
+        rect3_2()
+        
+        rect4_1()
+        
+        rect5()
+        
+        calculatorButton3()
+        
+        if rect1_2sum == 88:
+            image(img1, 0, 0)
+            player1 = ""
+            player2 = ""
+            player3 = ""
+            player4 = ""
+            player5 = ""   
+            CBtext1 = ""
+            CBtext2 = ""
+            CBtext3 = ""
+            
+        if rect2_2sum == 88:
+            image(img2, 0, 0)
+            player1 = ""
+            player2 = ""
+            player3 = ""
+            player4 = ""
+            player5 = ""   
+            CBtext1 = ""
+            CBtext2 = ""
+            CBtext3 = ""
+        
+        if rect3_2sum == 88:
+            image(img3, 0, 0)
+            player1 = ""
+            player2 = ""
+            player3 = ""
+            player4 = ""
+            player5 = ""   
+            CBtext1 = ""
+            CBtext2 = ""
+            CBtext3 = ""
+        
+        if rect4_1sum == 88:
+            image(img4, 0, 0)
+            player1 = ""
+            player2 = ""
+            player3 = ""
+            player4 = ""
+            player5 = ""      
+            CBtext1 = ""
+            CBtext2 = ""
+            CBtext3 = ""  
+            
+        if rect5sum == 88:
+            image(img5, 0, 0)
+            player1 = ""
+            player2 = ""
+            player3 = ""
+            player4 = ""
+            player5 = ""      
+            CBtext1 = ""
+            CBtext2 = ""
+            CBtext3 = ""  
+        
+        
+
+def mousePressed():
+         
+    global img1, img2, img3, img4, img5, calculatorButton1, calculatorButton2, calculatorButton3, rect1sum, rect1_1sum, rect1_2sum, rect2sum, rect2_1sum, rect2_2sum, rect3sum
+    global rect3_1sum, rect3_2sum, rect4sum, rect4_1sum, rect5sum,  rect1, rect1_1, rect1_2, rect2, rect2_1, rect2_2, rect3, rect3_1, rect3_2, rect4, rect4_1, rect5
+    global rect1Height, rect1_1Height, rect1_2Height, rect2Height, rect2_1Height, rect2_2Height, rect3Height, rect3_1Height, rect3_2Height, rect4Height, rect4_1Height, rect5Height, rect1Won
+
+    if (key == '3'):
+        print(str(mouseX), str(mouseY))
+        if rect1sum < 88:
+            
+            if (mouseX >= 225 and mouseX <= 325 and mouseY >= rect1Height and mouseY <= 630):        
+                if (mousePressed and (mouseButton == LEFT)):
+                    rect1Height -= 3  
+                    rect1sum += 1 
+                if rect1sum > 0:
+                    if (mousePressed and (mouseButton == RIGHT)):
+                        rect1Height += 3
+                        rect1sum -= 1
+                                      
+                        
+        if rect2sum < 88:
+                
+            if (mouseX >= 350 and mouseX <= 450 and mouseY >= rect2Height and mouseY <= 630):    
+                if (mousePressed and (mouseButton == LEFT)):
+                    rect2Height -= 3
+                    rect2sum += 1   
+                if rect2sum > 0:
+                    if (mousePressed and (mouseButton == RIGHT)):
+                        rect2Height += 3
+                        rect2sum -= 1
+        if rect3sum < 88:
+                            
+            if (mouseX >= 475 and mouseX <= 575 and mouseY >= rect3Height and mouseY <= 630):        
+                if (mousePressed and (mouseButton == LEFT)):
+                    rect3Height -= 3
+                    rect3sum += 1   
+                if rect3sum > 0:
+                    if (mousePressed and (mouseButton == RIGHT)):
+                        rect3Height += 3
+                        rect3sum -= 1
+
+                        
+    if (key == '4'):
+        print(str(mouseX), str(mouseY))
+        if rect1_1sum < 88:
+            
+            if (mouseX >= 150 and mouseX <= 250 and mouseY >= rect1_1Height and mouseY <= 630):    
+                if (mousePressed and (mouseButton == LEFT)):
+                    rect1_1Height -= 3
+                    rect1_1sum += 1   
+                if rect1_1sum > 0:
+                    if (mousePressed and (mouseButton == RIGHT)):
+                        rect1_1Height += 3
+                        rect1_1sum -= 1
+        if rect2_1sum < 88:
+               
+            if (mouseX >= 280 and mouseX <= 380 and mouseY >= rect2_1Height and mouseY <= 630):    
+                if (mousePressed and (mouseButton == LEFT)):
+                    rect2_1Height -=3
+                    rect2_1sum += 1   
+                if rect2_1sum > 0:
+                    if (mousePressed and (mouseButton == RIGHT)):
+                        rect2_1Height += 3
+                        rect2_1sum -= 1
+        if rect3_1sum < 88:
+                            
+            if (mouseX >= 410 and mouseX <= 510 and mouseY >= rect3_1Height and mouseY <= 630):    
+                if (mousePressed and (mouseButton == LEFT)):
+                    rect3_1Height -= 3
+                    rect3_1sum += 1   
+                if rect3_1sum > 0:
+                    if (mousePressed and (mouseButton == RIGHT)):
+                        rect3_1Height += 3
+                        rect3_1sum -= 1            
+        if rect4sum < 88:
+                    
+            if (mouseX >= 540 and mouseX <= 640 and mouseY >= rect4Height and mouseY <= 630):    
+                if (mousePressed and (mouseButton == LEFT)):
+                    rect4Height -= 3
+                    rect4sum += 1   
+                if rect4sum > 0:
+                    if (mousePressed and (mouseButton == RIGHT)):
+                        rect4Height += 3
+                        rect4sum -= 1  
+                        
+                        
+    if (key == '5'):
+        print(str(mouseX), str(mouseY))
+        if rect1_2sum < 88:
+            
+            if (mouseX >= 90 and mouseX <= 190 and mouseY >= rect1_2Height and mouseY <= 630):    
+                if (mousePressed and (mouseButton == LEFT)):
+                    rect1_2Height -= 3
+                    rect1_2sum += 1   
+                if rect1_2sum > 0:
+                    if (mousePressed and (mouseButton == RIGHT)):
+                        rect1_2Height += 3
+                        rect1_2sum -= 1
+        if rect2_2sum < 88:
+                
+            if (mouseX >= 220 and mouseX <= 320 and mouseY >= rect2_2Height and mouseY <= 630):    
+                if (mousePressed and (mouseButton == LEFT)):
+                    rect2_2Height -= 3
+                    rect2_2sum += 1   
+                if rect2_2sum > 0:
+                    if (mousePressed and (mouseButton == RIGHT)):
+                        rect2_2Height += 3
+                        rect2_2sum -= 1
+        if rect3_2sum < 88:
+                            
+            if (mouseX >= 350 and mouseX <= 450 and mouseY >= rect3_2Height and mouseY <= 630):    
+                if (mousePressed and (mouseButton == LEFT)):
+                    rect3_2Height -= 3
+                    rect3_2sum += 1   
+                if rect3_2sum > 0:
+                    if (mousePressed and (mouseButton == RIGHT)):
+                        rect3_2Height += 3
+                        rect3_2sum -= 1            
+        if rect4_1sum < 88:
+                    
+            if (mouseX >= 480 and mouseX <= 580 and mouseY >= rect4_1Height and mouseY <= 630):    
+                if (mousePressed and (mouseButton == LEFT)):
+                    rect4_1Height -= 3
+                    rect4_1sum += 1   
+                if rect4_1sum > 0:
+                    if (mousePressed and (mouseButton == RIGHT)):
+                        rect4_1Height += 3
+                        rect4_1sum -= 1     
+        if rect5sum < 88:
+                            
+            if (mouseX >= 610 and mouseX <= 710 and mouseY >= rect5Height and mouseY <= 630):    
+                if (mousePressed and (mouseButton == LEFT)):
+                    rect5Height -= 3
+                    rect5sum += 1   
+                if rect5sum > 0:
+                    if (mousePressed and (mouseButton == RIGHT)):
+                        rect5Height += 3
+                        rect5sum -= 1              
